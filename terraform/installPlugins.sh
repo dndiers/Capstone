@@ -94,7 +94,7 @@ java -jar /tmp/jenkins-plugin-cli -s http://localhost:8080/ -auth admin:`sudo ca
 # Add the Capstone5 project to jenkins
 sudo systemctl restart jenkins
 
-curl https://raw.githubusercontent.com/bailey572/devops/main/05_Capstone/JenkinsFile/config.xml --output /tmp/config.xml 
+curl https://raw.githubusercontent.com/dndiers/devops/main/05_Capstone/JenkinsFile/config.xml --output /tmp/config.xml 
 java -jar /tmp/jenkins-plugin-cli -s http://localhost:8080/ -auth admin:`sudo cat /var/lib/jenkins/secrets/initialAdminPassword` -webSocket create-job Capstone5 < /tmp/config.xml
 
 echo Jenkins Plugins Installed
